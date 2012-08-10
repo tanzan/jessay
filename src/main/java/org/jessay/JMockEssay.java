@@ -10,7 +10,7 @@ import org.junit.Test;
  *
  * @author Serg Zubovich
  */
-public abstract class JMockEssay extends Expectations implements Essay {
+public abstract class JMockEssay extends Expectations implements EssayI {
     
     private Mockery context;
     
@@ -24,7 +24,7 @@ public abstract class JMockEssay extends Expectations implements Essay {
         this.context = context;
     }        
 
-    private Essay essay = new AbstractEssay(){
+    private EssayI essay = new AbstractEssay(){
 
         @Override
         public void expectations() throws Exception {

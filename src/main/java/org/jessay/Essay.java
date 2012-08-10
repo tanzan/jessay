@@ -1,12 +1,16 @@
 package org.jessay;
 
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
 /**
  *
  * @author serg
  */
-public interface Essay {
-    void expectations() throws Exception;
-    void fixtures() throws Exception;
-    void test() throws Exception;
-    void run() throws Exception;
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.TYPE)
+public @interface Essay {
+    
 }
