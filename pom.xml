@@ -7,10 +7,10 @@
 
     <groupId>org.jessay</groupId>
     <artifactId>jessay</artifactId>
-    <version>1.3-alpha-6</version>                
+    <version>1.3</version>
     
     <properties>
-        <jmock.version>2.6.0-RC2</jmock.version>
+        <jmock.version>2.6.0-DEPFIX</jmock.version>
     </properties>
     
     <dependencies>        
@@ -30,7 +30,7 @@
             <version>${jmock.version}</version>
         </dependency>
     </dependencies>
-    
+
     <build>
         <plugins>
             <plugin>
@@ -43,5 +43,12 @@
             </plugin>
         </plugins>
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>cdp.cdpproduction.cc</id>
+            <url>http://artifactory.cdpproduction.cc/artifactory/cdp</url>
+        </repository>
+    </distributionManagement>
 
 </project>
