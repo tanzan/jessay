@@ -13,6 +13,7 @@ public abstract class AbstractEssay implements EssayI {
         fixtures();
         expectations();
         test();
+        assertions();
     }
 
 }

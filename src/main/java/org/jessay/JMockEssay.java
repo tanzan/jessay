@@ -26,20 +26,24 @@ public abstract class JMockEssay extends Expectations implements EssayI {
 
     private EssayI essay = new AbstractEssay(){
 
-        @Override
+
         public void expectations() throws Exception {
             JMockEssay.this.expectations();
             context().checking(JMockEssay.this);
         }
 
-        @Override
+
         public void fixtures() throws Exception {
             JMockEssay.this.fixtures();
         }
 
-        @Override
+
         public void test() throws Exception {
             JMockEssay.this.test();
+        }
+
+        public void assertions() throws Exception {
+            JMockEssay.this.assertions();
         }
 
     };
@@ -62,6 +66,10 @@ public abstract class JMockEssay extends Expectations implements EssayI {
 
     public void test() throws Exception {
         
+    }
+
+    public void assertions() throws Exception {
+
     }
 
     @Test
